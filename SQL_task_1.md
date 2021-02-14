@@ -15,11 +15,17 @@ ManagerID | FirstName | LastName
 369 | Bob | Park
 
 1. Посчитать количество всех сотрудников, которые до сих пор работают в компании (флаг Active)
-   `SELECT * FROM employees WHERE active = 1;`
+   ```
+   SELECT * FROM employees WHERE active = 1;
+   ```
 2. Посчитать количество всех сотрудников на каждой должности
-   `SELECT jobposition, COUNT (EmployeeID) FROM employees GROUP BY jobposition;`
+   ```
+   SELECT jobposition, COUNT (EmployeeID) FROM employees GROUP BY jobposition;
+   ```
 3. Вывести тех сотрудников (FirstName, LastName), у которых заработная плата больше либо равна 2000$
-   `SELECT firstname, lastname FROM employees WHERE salary >= 2000;`
+   ```
+   SELECT firstname, lastname FROM employees WHERE salary >= 2000;
+   ```
 4. Вывести только те должности (JobPosition) сотрудников, где средняя заработная плата превышает 2000$
    ```
    SELECT jobposition FROM(SELECT jobposition, AVG(salary) as avgs FROM employees GROUP BY jobposition) as r
