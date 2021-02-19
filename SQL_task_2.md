@@ -13,7 +13,7 @@ https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_in
 
 3. Выбрать самого молодого сотрудника, родившегося в 50-х годах.<br>
    ```
-   SELECT * FROM Employees WHERE BirthDate = (SELECT MIN(BirthDate) FROM Employees 
+   SELECT * FROM Employees WHERE BirthDate = (SELECT MAX(BirthDate) FROM Employees 
    WHERE BirthDate BETWEEN '1950-01-01' AND '1959-12-31');
    ```
 
